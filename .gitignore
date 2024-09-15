@@ -1,0 +1,10 @@
+# .gitignore
+/build/
+*.exe
+*.out
+*.a
+*.o
+*.log
+*.cache
+*.swp
+/bin/
