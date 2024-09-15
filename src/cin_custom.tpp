@@ -1,7 +1,7 @@
 /// cin_custom.tpp
 
 /**
- * @author Julian Schweizer
+ * @author juscghwe <a href = "https://github.com/juscghwe">GitHub<\a>
  * @brief Templated method to handle input of any `type`.
  * @param prompt `std::string&` Reference to the string prompting the user to input in the terminal.
  * @param showError `bool = true` (opt) Shows a hint telling the user the wrong type he used.

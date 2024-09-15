@@ -1,4 +1,7 @@
 /// cin_custom.h
+/**
+ * @author juscghwe <a href = "https://github.com/juscghwe">GitHub<\a>
+ */
 
 #ifndef CINCUSTOMLIB_CINCUSTOMLIB_CINCUSTOM_H_
 #define CINCUSTOMLIB_CINCUSTOMLIB_CINCUSTOM_H_

@@ -1,7 +1,7 @@
 /// cin_custom.cpp
 
 /**
- * @author Julian Schweizer
+ * @author juscghwe <a href = "https://github.com/juscghwe">GitHub<\a>
  * @brief Custom Cin class to quickly integrate within learning projects.
  * @details Allows input of `type` and filters the input accordingly.
  * @headerfile CinCustomLib/cin_custom.h
