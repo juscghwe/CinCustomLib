@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Tests",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/test/test_main", // Replace with your actual test binary path
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe", // Update if different on your system
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "CMake Build", // Builds before running tests
+            "logging": {
+                "moduleLoad": false,
+                "trace": false,
+                "engineLogging": false,
+                "programOutput": true,
+                "exceptions": true
+            }
+        }
+    ]
+}
