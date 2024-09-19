@@ -34,19 +34,24 @@
                 "-I${workspaceFolder}/include",
                 "-I${workspaceFolder}/test",
                 "${workspaceFolder}/test/test_main.cpp",
+                "${workspaceFolder}/src/cin_custom.cpp",
                 "-lgtest",
                 "-lgtest_main",
                 "-pthread",
                 "-o",
                 "${workspaceFolder}/bin/test_executable"
             ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": [
-                "$gcc"
-            ]
+            "detail": "Build the tests for custom cin package."
         }
     ],
     "version": "2.0.0"
