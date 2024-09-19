@@ -1,4 +1,4 @@
-/// test_main.cpp
+/// test_inputtypes_incorrect.cpp
 
 /**
  * @author Julian Schweizer
@@ -26,8 +26,20 @@ class CinCustomInputtypeIncorrectFixture : public ::testing::Test
     }
 };
 
+TEST_F(CinCustomInputtypeIncorrectFixture, InvalidIntInputRetry)
+{
+    SetInput("1.78\n7\n");
+    EXPECT_EQ(inputHandler.getInput<int>("Enter 7: "), 7);
+}
+
 TEST_F(CinCustomInputtypeIncorrectFixture, InvalidStringInputRetry)
 {
-    SetInput("abc\n7\n");
-    EXPECT_EQ(inputHandler.getInput<int>("Enter 7: "), 7);
+    SetInput("1.8\nabc\n");
+    EXPECT_EQ(inputHandler.getInput<std::string>("Enter abc: "), "abc");
+}
+
+TEST_F(CinCustomInputtypeIncorrectFixture, InvalidDoubleInputRetry)
+{
+    SetInput("abc\n1.89\n");
+    EXPECT_EQ(inputHandler.getInput<double>("Enter 1.89: "), 1.89);
 }

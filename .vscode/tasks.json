@@ -34,6 +34,8 @@
                 "-I${workspaceFolder}/include",
                 "-I${workspaceFolder}/test",
                 "${workspaceFolder}/test/test_main.cpp",
+                "${workspaceFolder}/test/test_inputtypes_incorrect.cpp",
+                "${workspaceFolder}/test/test_inputtypes_correct.cpp",
                 "${workspaceFolder}/src/cin_custom.cpp",
                 "-lgtest",
                 "-lgtest_main",

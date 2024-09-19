@@ -2,6 +2,7 @@
 
 /**
  * @author Julian Schweizer
+ * @brief Simulate std::cin with valid first input.
  */
 
 #include <gtest/gtest.h>
