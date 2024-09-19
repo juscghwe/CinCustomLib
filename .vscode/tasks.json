@@ -27,7 +27,7 @@
         },
         {
             "type": "shell",
-            "label": "Build and Run Tests",
+            "label": "Build Tests",
             "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
             "args": [
                 "-std=c++17",
@@ -54,6 +54,32 @@
                 "isDefault": true
             },
             "detail": "Build the tests for custom cin package."
+        },
+        {
+            "label": "Run Tests",
+            "type": "shell",
+            "command": "${workspaceFolder}/bin/test_executable",
+            "dependsOn": [
+                "Build Tests"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "detail": "Run the test executable."
+        },
+        {
+            "label": "Build and Run Tests",
+            "dependsOn": [
+                "Build Tests",
+                "Run Tests"
+            ],
+            "dependsOrder": "sequence",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build an run the tests."
         }
     ],
     "version": "2.0.0"
