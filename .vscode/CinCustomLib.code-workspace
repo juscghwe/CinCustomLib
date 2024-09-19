@@ -4,8 +4,6 @@
 			"path": ".."
 		}
 	],
-	"C_Cpp.codeAnalysis.clangTidy.enabled": true,
-	"C_Cpp.codeAnalysis.clangTidy.config": "${workspaceFolder}/.clang-tidy",
 	"settings": {
 		"files.associations": {
 			"limits": "cpp",
