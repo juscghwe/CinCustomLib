@@ -4,8 +4,8 @@
  * @author Julian Schweizer
  */
 
-#include <../include/CinCustomLib/cin_custom.h>
 #include <gtest/gtest.h>
+#include <../include/CinCustomLib/cin_custom.hpp>
 
 TEST(CinCustomTest, BasicInput)
 {

@@ -14,7 +14,7 @@
  * ```
  */
 
-#include "../include/CinCustomLib/cin_custom.h"
+#include "../include/CinCustomLib/cin_custom.hpp"
 #include <iostream>
 #include <limits>
 

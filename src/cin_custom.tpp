@@ -10,7 +10,7 @@
 
 #include <iostream>
 #include <typeinfo>
-#include "../include/CinCustomLib/cin_custom.h"
+#include "../include/CinCustomLib/cin_custom.hpp"
 
 namespace CinCustomLib {
 
