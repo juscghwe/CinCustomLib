@@ -24,6 +24,29 @@
                 "isDefault": true
             },
             "detail": "Build the custom cin package library."
+        },
+        {
+            "type": "shell",
+            "label": "Build and Run Tests",
+            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "args": [
+                "-std=c++17",
+                "-I${workspaceFolder}/include",
+                "-I${workspaceFolder}/test",
+                "${workspaceFolder}/test/test_main.cpp",
+                "-lgtest",
+                "-lgtest_main",
+                "-pthread",
+                "-o",
+                "${workspaceFolder}/bin/test_executable"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
         }
     ],
     "version": "2.0.0"
