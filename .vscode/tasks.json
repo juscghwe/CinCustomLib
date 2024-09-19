@@ -7,11 +7,10 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${workspaceFolder}\\src\\*.cpp",
+                "${file}",
                 "-o",
-                "${workspaceFolder}\\bin\\lib${fileBasenameNoExtension}.a",
-                "-I${workspaceFolder}\\include",
-                "-c"
+                "${workspaceFolder}\\${fileBasenameNoExtension}.exe",
+                "-I${workspaceFolder}\\include"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -23,7 +22,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "Build the custom cin package library."
+            "detail": "Build the active C++ file."
         },
         {
             "type": "shell",
