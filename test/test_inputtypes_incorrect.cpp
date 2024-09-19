@@ -2,17 +2,32 @@
 
 /**
  * @author Julian Schweizer
+ * @brief Simulate std::cin with invalid first input and valid second input.
  */
 
 #include <gtest/gtest.h>
 #include <../include/CinCustomLib/cin_custom.hpp>
 #include <sstream>
 
-TEST(CinCustomInputtypeIncorrectTest, InvalidInputRetry)
+class CinCustomInputtypeIncorrectFixture : public ::testing::Test
 {
+  protected:
     CinCustomLib::CinCustom inputHandler;
-    // Simulate std::cin with invalid first input and valid second input
-    std::istringstream input("abc\n7\n");
-    std::cin.rdbuf(input.rdbuf());  //Redirect std::cin to use the stringstream
-    EXPECT_EQ(inputHandler.getInput<int>("Enter 5: "), 7);
+    std::istringstream input;
+
+    void SetInput(const std::string& data)
+    {
+        /**
+         * @brief Redirects simulated input string to std::cin.
+         * @param data `std::string&` Reference to the simulated input
+         */
+        input.str(data);
+        std::cin.rdbuf(input.rdbuf());
+    }
+};
+
+TEST_F(CinCustomInputtypeIncorrectFixture, InvalidStringInputRetry)
+{
+    SetInput("abc\n7\n");
+    EXPECT_EQ(inputHandler.getInput<int>("Enter 7: "), 7);
 }

@@ -50,7 +50,26 @@
 			"ostream": "cpp",
 			"stdexcept": "cpp",
 			"streambuf": "cpp",
-			"typeinfo": "cpp"
+			"typeinfo": "cpp",
+			"any": "cpp",
+			"charconv": "cpp",
+			"condition_variable": "cpp",
+			"cstdarg": "cpp",
+			"cstring": "cpp",
+			"ctime": "cpp",
+			"map": "cpp",
+			"set": "cpp",
+			"ratio": "cpp",
+			"format": "cpp",
+			"mutex": "cpp",
+			"semaphore": "cpp",
+			"span": "cpp",
+			"sstream": "cpp",
+			"stop_token": "cpp",
+			"text_encoding": "cpp",
+			"thread": "cpp",
+			"cinttypes": "cpp",
+			"variant": "cpp"
 		}
 	}
 }
