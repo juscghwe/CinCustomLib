@@ -1,8 +1,9 @@
-/// test_inputtypes_incorrect.cpp
-
 /**
- * @author Julian Schweizer
+ * @file test_inputtypes_incorrect.cpp
+ * @author juscghwe <a href = "https://github.com/juscghwe">GitHub<\a>
  * @brief Simulate std::cin with invalid first input and valid second input.
+ * @details Testing is done for `int`, `std:string` and `double`.
+ * This file is part of {{CinCustomLib}}, which is licensed unter the MIT License. See the LICENSE file for details.
  */
 
 #include <gtest/gtest.h>

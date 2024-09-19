@@ -1,17 +1,8 @@
-/// cin_custom.cpp
-
 /**
+ * @file cin_custom.cpp
  * @author juscghwe <a href = "https://github.com/juscghwe">GitHub<\a>
- * @brief Custom Cin class to quickly integrate within learning projects.
- * @details Allows input of `type` and filters the input accordingly.
- * @headerfile CinCustomLib/cin_custom.h
- * 
- * @example
- * ```
- * CinCustom inputHandler;
- * int age = inputHandler.getInput<int>("Enter your age: ", true, true);
- * std::cout << "You entered age: " << age << std::endl;
- * ```
+ * @headerfile CinCustomLib/cin_custom.hpp
+ * This file is part of {{CinCustomLib}}, which is licensed unter the MIT License. See the LICENSE file for details.
  */
 
 #include "../include/CinCustomLib/cin_custom.hpp"
@@ -21,20 +12,12 @@
 
 namespace CinCustomLib {
 
-/**
- * @private
- * @brief Clears input stream errors and ignores invalid characters.
- */
 void CinCustom::clearInput()
 {
     std::cin.clear();                                                    // Clear the error flag
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // Ignore invalid input
 }
 
-/**
- * @private
- * @brief ESC key handler
- */
 bool CinCustom::handleEscKey()
 {
     char ch = _getch();

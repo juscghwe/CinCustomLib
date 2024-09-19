@@ -1,7 +1,8 @@
-/// test_main.cpp
-
 /**
- * @author Julian Schweizer
+ * @file test_main.cpp
+ * @author juscghwe <a href = "https://github.com/juscghwe">GitHub<\a>
+ * @headerfile CinCustomLib/cin_custom.hpp
+ * This file is part of {{CinCustomLib}}, which is licensed unter the MIT License. See the LICENSE file for details.
  */
 
 #include <gtest/gtest.h>

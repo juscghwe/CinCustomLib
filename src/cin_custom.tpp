@@ -1,11 +1,8 @@
-/// cin_custom.tpp
-
 /**
+ * @file cin_custom.tpp
  * @author juscghwe <a href = "https://github.com/juscghwe">GitHub<\a>
- * @brief Templated method to handle input of any `type`.
- * @param prompt `std::string&` Reference to the string prompting the user to input in the terminal.
- * @param acceptEsc `bool = true` (opt) The entire program can be canceled through using the ESC-key.
- * @param showError `bool = true` (opt) Shows a hint telling the user the wrong type he used.
+ * @headerfile CinCustomLib/cin_custom.hpp
+ * This file is part of {{CinCustomLib}}, which is licensed unter the MIT License. See the LICENSE file for details.
  */
 
 #include <iostream>
