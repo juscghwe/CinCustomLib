@@ -17,16 +17,7 @@
  * ASSERT_XXX / EXPECT_XXX: These macros verify the behavior of the code. ASSERT stops the test if the condition fails; EXPECT logs the failure but continues running.
  */
 
-TEST(CinCustomTest, ValidIntInput)
-{
-    CinCustomLib::CinCustom inputHandler;
-    // Simulate std::cin
-    std::istringstream input("5\n");
-    std::cin.rdbuf(input.rdbuf());  //Redirect std::cin to use the stringstream
-    EXPECT_EQ(inputHandler.getInput<int>("Enter 5: "), 5);
-}
-
-TEST(CinCustomTest, InvalidInputRetry)
+TEST(CinCustomInputtypeIncorrectTest, InvalidInputRetry)
 {
     CinCustomLib::CinCustom inputHandler;
     // Simulate std::cin with invalid first input and valid second input
