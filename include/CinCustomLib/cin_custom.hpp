@@ -1,10 +1,10 @@
-/// cin_custom.h
+/// cin_custom.hpp
 /**
  * @author juscghwe <a href = "https://github.com/juscghwe">GitHub<\a>
  */
 
-#ifndef CINCUSTOMLIB_CINCUSTOMLIB_CINCUSTOM_H_
-#define CINCUSTOMLIB_CINCUSTOMLIB_CINCUSTOM_H_
+#ifndef CINCUSTOMLIB_CINCUSTOMLIB_CINCUSTOM_HPP_
+#define CINCUSTOMLIB_CINCUSTOMLIB_CINCUSTOM_HPP_
 
 #include <string>
 
@@ -24,4 +24,4 @@ class CinCustom
 
 #include "../src/cin_custom.tpp"  // For template function definitions
 
-#endif  // CINCUSTOMLIB_CINCUSTOMLIB_CINCUSTOM_H_
+#endif  // CINCUSTOMLIB_CINCUSTOMLIB_CINCUSTOM_HPP_

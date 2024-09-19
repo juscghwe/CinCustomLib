@@ -3,21 +3,17 @@
 cmake_minimum_required(VERSION 3.10)
 project(CinCustomLib)
 
-# Set C++ compilers
-set(CMAKE_C_COMPILER C:/msys64/ucrt64/bin/gcc.exe)
-set(CMAKE_CXX_COMPILER C:/msys64/ucrt64/bin/g++.exe)
-
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Add the include directory for headers
-include_directories(${PROJECT_SOURCE_DIR}/include)
 
-# Create the static library
-add_library(CinCustomLib STATIC
-    src/cin_custom.cpp
-)
+# Specify the include directory as an interface target
+add_library(CinCustomLib INTERFACE)
+
+# Add the headers directory to the include path
+target_include_directories(CinCustomLib INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+
 
 # Include GTest (replace the path if installed elsewhere)
 find_package(GTest REQUIRED)

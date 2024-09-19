@@ -4,7 +4,7 @@
  * @author juscghwe <a href = "https://github.com/juscghwe">GitHub<\a>
  * @brief Custom Cin class to quickly integrate within learning projects.
  * @details Allows input of `type` and filters the input accordingly.
- * @headerfile CinCustomLib/cin_custom.h
+ * @headerfile CinCustomLib/cin_custom.hpp
  * 
  * @example
  * ```
@@ -14,7 +14,7 @@
  * ```
  */
 
-#include "../include/CinCustomLib/cin_custom.h"
+#include "../include/CinCustomLib/cin_custom.hpp"
 #include <iostream>
 #include <limits>
 
