@@ -18,6 +18,7 @@ class CinCustom
 
   private:
     static void clearInput();
+    static bool handleEscKey();
 };
 
 }  // namespace CinCustomLib

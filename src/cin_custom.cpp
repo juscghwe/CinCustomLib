@@ -15,6 +15,7 @@
  */
 
 #include "../include/CinCustomLib/cin_custom.hpp"
+#include <conio.h>
 #include <iostream>
 #include <limits>
 
@@ -28,6 +29,16 @@ void CinCustom::clearInput()
 {
     std::cin.clear();                                                    // Clear the error flag
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // Ignore invalid input
+}
+
+bool CinCustom::handleEscKey()
+{
+    char ch = _getch();
+    if (ch == 27) {
+        std::cout << "ESC key pressed. Exiting ..." << std::endl;
+        return true;
+    }
+    return false;
 }
 
 }  // namespace CinCustomLib

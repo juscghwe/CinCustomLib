@@ -23,6 +23,10 @@ auto CinCustom::getInput(const std::string& prompt, bool showError, bool acceptE
     while (!validInput) {
         std::cout << prompt;
 
+        if (acceptEsc && handleEscKey()) {
+            throw std::runtime_error("Operation canceled by the user.");
+        }
+
         if (!(std::cin >> input)) {
             if (showError) {
                 std::cout << "Invalid input. Please enter a value of type: " << typeid(T).name() << std::endl;
