@@ -29,17 +29,17 @@ class CinCustomInputtypeCorrectFixture : public ::testing::Test
 TEST_F(CinCustomInputtypeCorrectFixture, ValidIntInput)
 {
     SetInput("5\n");
-    EXPECT_EQ(inputHandler.getInput<int>("Enter 5: "), 5);
+    EXPECT_EQ(inputHandler.getInput<int>("Enter 5: ", false), 5);
 }
 
 TEST_F(CinCustomInputtypeCorrectFixture, ValidStringInput)
 {
     SetInput("abc\n");
-    EXPECT_EQ(inputHandler.getInput<std::string>("Enter abc: "), "abc");
+    EXPECT_EQ(inputHandler.getInput<std::string>("Enter abc: ", false), "abc");
 }
 
 TEST_F(CinCustomInputtypeCorrectFixture, ValidDoubleInput)
 {
     SetInput("1.019\n");
-    EXPECT_EQ(inputHandler.getInput<double>("Enter abc: "), 1.019);
+    EXPECT_EQ(inputHandler.getInput<double>("Enter abc: ", false), 1.019);
 }

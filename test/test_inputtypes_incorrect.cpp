@@ -28,18 +28,18 @@ class CinCustomInputtypeIncorrectFixture : public ::testing::Test
 
 TEST_F(CinCustomInputtypeIncorrectFixture, InvalidIntInputRetry)
 {
-    SetInput("1.78\n7\n");
-    EXPECT_EQ(inputHandler.getInput<int>("Enter 7: "), 7);
+    SetInput("abc\n7\n");
+    EXPECT_EQ(inputHandler.getInput<int>("Enter 7: ", false), 7);
 }
 
 TEST_F(CinCustomInputtypeIncorrectFixture, InvalidStringInputRetry)
 {
     SetInput("1.8\nabc\n");
-    EXPECT_EQ(inputHandler.getInput<std::string>("Enter abc: "), "abc");
+    EXPECT_EQ(inputHandler.getInput<std::string>("Enter abc: ", false), "abc");
 }
 
 TEST_F(CinCustomInputtypeIncorrectFixture, InvalidDoubleInputRetry)
 {
     SetInput("abc\n1.89\n");
-    EXPECT_EQ(inputHandler.getInput<double>("Enter 1.89: "), 1.89);
+    EXPECT_EQ(inputHandler.getInput<double>("Enter 1.89: ", false), 1.89);
 }

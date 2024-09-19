@@ -31,6 +31,10 @@ void CinCustom::clearInput()
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // Ignore invalid input
 }
 
+/**
+ * @private
+ * @brief ESC key handler
+ */
 bool CinCustom::handleEscKey()
 {
     char ch = _getch();
